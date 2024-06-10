@@ -203,6 +203,7 @@ a:hover {
 .aside img {
   padding-top: 1em;
   width: 60%;
+  height: 25em;
   opacity: .8;
   transition: .5s;
 }
