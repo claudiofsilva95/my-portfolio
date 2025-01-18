@@ -6,11 +6,13 @@
   box-sizing: border-box;
   font-family: sans-serif;
   color: rgb(248, 248, 248);
+  box-sizing: border-box;
 }
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -82,6 +84,7 @@ a:hover {
   display: flex;
   margin: 3em 5em;
   height: 32em;
+  min-height: 120%;
   justify-content: space-between;
 }
 
@@ -162,7 +165,7 @@ a:hover {
   .main {
     flex-direction: column;
     margin-left: 0;
-    margin-right: 0;    
+    margin-right: 0;
   }
   .section {
     width: 100%;
@@ -203,7 +206,7 @@ a:hover {
 .aside img {
   padding-top: 1em;
   width: 55%;
-  height: 75%;
+  height: 500px;
   opacity: .8;
   transition: .5s;
 }
@@ -244,7 +247,7 @@ a:hover {
 
 .footer {
   padding-bottom: 1em;
-  margin: 15em 5em 1em;
+  margin: 25em 5em 1em;
   display: flex;
   justify-content: space-between;
 }
@@ -264,20 +267,34 @@ a:hover {
 }
 
 @media screen and (max-width: 1100px) {
-  .footer {      
-    height: 100vw;             
-    margin: 0;
-    margin-top: 15em;
+  .footer {          
+    margin: 0;  
     padding: 2em;
     align-items: flex-end;
+    margin-top: 40em;
   }
 }
 
 @media screen and (max-width: 700px) {
-  .footer {
-    height: 240vw;
+  html, body {
+    height: 100%; /* Garantir que o body e html ocupem 100% da altura */
+    margin: 0; /* Remover margens padrão */
   }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1; /* Isso garante que o main ocupe o espaço disponível */
+    display: flex;
+    flex-direction: column;
+  }  
   .contact {
     margin-right: 0;
+  }
+  .footer {
+    margin-top: 80em;
   }
 }
